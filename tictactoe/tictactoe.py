@@ -43,7 +43,7 @@ def actions(board):
             if board[i][j] == EMPTY:
                 possible_actions.add((i, j))
     return possible_actions
-    # raise NotImplementedError
+
 
 
 def result(board, action):
@@ -58,7 +58,7 @@ def result(board, action):
     new_board = [row[:] for row in board]  # Deep copy of the board
     new_board[i][j] = player_turn
     return new_board
-    raise NotImplementedError
+
 
 
 def winner(board):
@@ -99,7 +99,7 @@ def terminal(board):
     """
 
     return winner(board) is not None or all(all(cell is not None for cell in row) for row in board)
-    # raise NotImplementedError
+
 
 
 def utility(board):
@@ -114,7 +114,7 @@ def utility(board):
     else:
         return 0
 
-    # raise NotImplementedError
+
 
 
 def minimax(board):
@@ -144,7 +144,7 @@ def minimax(board):
                 best_action = action
 
     return best_action
-    # raise NotImplementedError
+
 
 
 def max_value_of_minimax(board):
